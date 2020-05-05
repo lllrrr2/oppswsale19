@@ -16,7 +16,7 @@ sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 #sed -i 's/(info.swap/Math.floor(info.swap/g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-dark-mod/g' feeds/luci/collections/luci/Makefile
 #sed -i 's/+kmod-nls-base @BUILD_PATENTED/+kmod-nls-base/g' feeds/packages/kernel/exfat-nofuse/Makefile
-sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=R9-$(shell date +%F-%H)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
+sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=R9-Sale-$(shell date +%F-%H)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
 
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ddns-scripts_aliyun package/lean/ddns-scripts_aliyun
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ddns-scripts_dnspod package/lean/ddns-scripts_dnspod
@@ -124,17 +124,6 @@ git clone https://github.com/Mleaf/openwrt-mwol package/lean/openwrt-mwol
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 cp ../Makefile tools/
-#rm -rf feeds/packages/net/aria2/
-#svn co https://github.com/openwrt/packages/branches/openwrt-18.06/net/aria2 feeds/packages/net/aria2
-#sed -i 's/1.33.0/1.33.1/g' feeds/packages/net/aria2/Makefile
-#sed -i 's/996e3fc2fd07ce2dd517e20a1f79b8b3dbaa5c7e27953b5fc19dae38f3874b8c/skip/g' feeds/packages/net/aria2/Makefile
-rm -rf feeds/luci/applications/luci-app-aria2/
-svn co https://github.com/kuoruan/openwrt-feeds/trunk/luci-app-aria2 feeds/luci/applications/luci-app-aria2
-sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/luasrc/controller/aria2.lua
-sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/luasrc/view/aria2/log_template.htm
-sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/luasrc/view/aria2/settings_header.htm
-rm -rf feeds/packages/net/ariang/
-svn co https://github.com/openwrt/packages/trunk/net/ariang feeds/packages/net/ariang
 git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
 #svn co https://github.com/openwrt/packages/trunk/libs/libmaxminddb package/lean/libmaxminddb
