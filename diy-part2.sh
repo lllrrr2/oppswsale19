@@ -49,16 +49,11 @@ svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
 cp ../Makefile tools/
 git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
-#svn co https://github.com/openwrt/packages/trunk/libs/libmaxminddb package/lean/libmaxminddb
-#svn co https://github.com/openwrt/packages/trunk/utils/zstd package/lean/zstd
 git clone https://github.com/lllrrr/frpmod package/lean/frpmod
 rm -rf feeds/packages/net/kcptun/
-#rm -rf feeds/packages/utils/ttyd/
 git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
-#sed -i 's_../../_$(TOPDIR)/feeds/luci/_' package/lean/luci-app-smartdns/Makefile
 cp ../target.mk include/
-#cp ../luci.mk feeds/luci/
 cp ../zzz-default-settings package/lean/default-settings/files/
 sed -i "s/8.3.19.0410/9.$(date "+%y.%m%d.%H")/g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/8.3.19.0410/9.$(date "+%y.%m%d.%H")/g" files/etc/banner
