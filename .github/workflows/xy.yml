@@ -63,7 +63,7 @@ jobs:
 
     - name: Load custom feeds
       run: |
-        [ -e xymod ] && mv xymod openwrt/target
+        [ -e xymod ] && mv xymod/* openwrt/target
         chmod +x $DIY_P1_SH
         cd openwrt
         ../$DIY_P1_SH
