@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: XiaoYu OpenWrt 19 Sale
+name: K2P OpenWrt 19 Sale
 
 on:
   repository_dispatch:
@@ -17,7 +17,7 @@ on:
     branches:
       - master
     paths:
-      - 'xy.config'
+      - 'k2p.config'
   schedule:
     - cron: 0 23 1 * *
   watch:
@@ -26,7 +26,7 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: v19.07.3
-  CONFIG_FILE: xy.config
+  CONFIG_FILE: k2p.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
@@ -99,7 +99,7 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"
-        echo "::set-env name=firmware_name::$(date "+%y.%m.%d")-XY-19-Sale-openwrt-firmware"
+        echo "::set-env name=firmware_name::$(date "+%y.%m.%d")-K2P-19-Sale-openwrt-firmware"
 
     - name: Upload bin directory
       uses: actions/upload-artifact@master
