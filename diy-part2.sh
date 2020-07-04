@@ -37,7 +37,7 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-lib-fs packa
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks package/lean/microsocks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
 git clone https://github.com/lienol/openwrt-package package/lienol
-git clone https://github.com/lllrrr/mypsw38 package/mypsw38
+#git clone https://github.com/lllrrr/mypsw38 package/mypsw38
 svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luci-app-terminal
 git clone https://github.com/vernesong/OpenClash package/lean/OpenClash
 git clone https://github.com/destan19/OpenAppFilter package/lean/OpenAppFilter
@@ -51,8 +51,9 @@ git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
 git clone https://github.com/lllrrr/frpmod package/lean/frpmod
 rm -rf feeds/packages/net/kcptun/
-git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
+git clone https://github.com/lllrrr/mysmartdns package/lean/mysmartdns
+#git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
+#git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 cp ../target.mk include/
 cp ../zzz-default-settings package/lean/default-settings/files/
 sed -i "s/8.3.19.0410/9.$(date "+%y.%m%d.%H")/g" package/lean/default-settings/files/zzz-default-settings
