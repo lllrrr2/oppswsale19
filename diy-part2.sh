@@ -42,7 +42,9 @@ svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luc
 git clone https://github.com/vernesong/OpenClash package/lean/OpenClash
 git clone https://github.com/destan19/OpenAppFilter package/lean/OpenAppFilter
 git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
+rm -rf feeds/packages/lang/golang/
 rm -rf feeds/packages/utils/ttyd/
+svn co https://github.com/openwrt/packages/trunk/lang/golang feeds/packages/lang/golang
 svn co https://github.com/openwrt/packages/trunk/utils/ttyd feeds/packages/utils/ttyd
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/upx tools/upx
@@ -51,7 +53,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
 git clone https://github.com/lllrrr/frpmod package/lean/frpmod
 rm -rf feeds/packages/net/kcptun/
-git clone https://github.com/lllrrr/mysmartdns package/lean/mysmartdns
+git clone https://github.com/lllrrr/mysmartdns package/mysmartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 cp ../target.mk include/
