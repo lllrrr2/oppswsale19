@@ -44,7 +44,10 @@ svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luc
 git clone https://github.com/vernesong/OpenClash package/lean/OpenClash
 git clone https://github.com/destan19/OpenAppFilter package/lean/OpenAppFilter
 git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
+svn co https://github.com/Lienol/openwrt/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/lang/golang/
+rm -rf feeds/packages/libs/libcap/
+svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 svn co https://github.com/Lienol/openwrt-packages/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/utils/ttyd/
 svn co https://github.com/openwrt/packages/trunk/utils/ttyd feeds/packages/utils/ttyd
@@ -59,6 +62,7 @@ git clone https://github.com/lllrrr/mysmartdns package/mysmartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 cp ../target.mk include/
+cp -r ../feeds/packages/ feeds/
 cp ../zzz-default-settings package/lean/default-settings/files/
 sed -i "s/8.3.19.0410/9.$(date "+%y.%m%d.%H")/g" package/lean/default-settings/files/zzz-default-settings
 sed -i "s/8.3.19.0410/9.$(date "+%y.%m%d.%H")/g" files/etc/banner
