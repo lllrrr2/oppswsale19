@@ -63,6 +63,6 @@ git clone https://github.com/lllrrr/mysmartdns package/mysmartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns package/lean/luci-app-smartdns
 cp ../target.mk include/
 cp -r ../feeds/packages/ feeds/
-cp ../zzz-default-settingsnew3w package/lean/default-settings/files/zzz-default-settings
-sed -i "s/8.3.19.0410/N9.3.$(date "+%y.%m%d.%H")/g" package/lean/default-settings/files/zzz-default-settings
-sed -i "s/8.3.19.0410/N9.3.$(date "+%y.%m%d.%H")/g" files/etc/banner
+cp ../zzz-default-settingsnew3 package/lean/default-settings/files/zzz-default-settings
+sed -i "s/8.3.19.0410/N9.$(date "+%y.%m%d.%H")/g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/8.3.19.0410/N9.$(date "+%y.%m%d.%H")/g" files/etc/banner
