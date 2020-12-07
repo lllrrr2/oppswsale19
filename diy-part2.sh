@@ -37,7 +37,8 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-zerotier
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-lib-fs package/lean/luci-lib-fs
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks package/lean/microsocks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
-git clone https://github.com/xiaorouji/openwrt-package package/lienol
+git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+git clone https://github.com/Lienol/openwrt-package package/openwrt-package
 #git clone https://github.com/lllrrr/mypsw38 package/mypsw38
 svn co https://github.com/lllrrr/mypsw/trunk/theme package/lean/theme
 svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luci-app-terminal
