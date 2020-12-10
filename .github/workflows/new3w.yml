@@ -20,8 +20,8 @@ on:
       - 'new3w.config'
 #  schedule:
 #    - cron: 0 23 1 * *
-  watch:
-    types: started
+#  watch:
+#    types: started
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
