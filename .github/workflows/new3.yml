@@ -99,7 +99,7 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"
-        echo "::set-env name=firmware_name::$(date "+%y.%m.%d")-New3-19-Sale-openwrt-firmware"
+        echo "FIRMWARE_NAME=$(date "+%y.%m.%d")-New3-19-Sale-openwrt-firmware" >> $GITHUB_ENV
 
     - name: Upload bin directory
       uses: actions/upload-artifact@master
@@ -126,5 +126,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: ${{ env.firmware_name }}
+        name: ${{ env.FIRMWARE_NAME }}
         path: ./artifact/
