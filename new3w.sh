@@ -45,11 +45,10 @@ svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luc
 git clone https://github.com/vernesong/OpenClash package/lean/OpenClash
 git clone https://github.com/destan19/OpenAppFilter package/lean/OpenAppFilter
 git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
-svn co https://github.com/Lienol/openwrt/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/lang/golang/
+svn co https://github.com/Lienol/openwrt-packages/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/libs/libcap/
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
-svn co https://github.com/Lienol/openwrt-packages/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/utils/ttyd/
 svn co https://github.com/openwrt/packages/trunk/utils/ttyd feeds/packages/utils/ttyd
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
