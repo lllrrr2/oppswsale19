@@ -49,12 +49,11 @@ sed -i 's/entry({"admin", "system", "leds"}/-- entry({"admin", "system", "leds"}
 sed -i 's/entry({"admin", "status", "syslog"}/-- entry({"admin", "status", "syslog"}/g' /usr/lib/lua/luci/controller/admin/status.lua
 sed -i 's/entry({"admin", "status", "dmesg"}/-- entry({"admin", "status", "dmesg"}/g' /usr/lib/lua/luci/controller/admin/status.lua
 sed -i 's/entry({"admin", "status", "processes"}/-- entry({"admin", "status", "processes"}/g' /usr/lib/lua/luci/controller/admin/status.lua
-sed -i 's/entry({"admin","services","frp"}/-- entry({"admin","services","frp"}/g' /usr/lib/lua/luci/controller/frp.lua
-sed -i 's/entry( {"admin", "services", "ddns"}/-- entry( {"admin", "services", "ddns"}/g' /usr/lib/lua/luci/controller/ddns.lua
+#sed -i 's/entry({"admin","services","frp"}/-- entry({"admin","services","frp"}/g' /usr/lib/lua/luci/controller/frp.lua
+#sed -i 's/entry( {"admin", "services", "ddns"}/-- entry( {"admin", "services", "ddns"}/g' /usr/lib/lua/luci/controller/ddns.lua
 
 sed -i 's/downloads.openwrt.org/mirrors.tuna.tsinghua.edu.cn\/openwrt/g' /etc/opkg/distfeeds.conf
 
-rm -rf /etc/config/passwall_show
 rm -rf /tmp/luci-*
 
 exit 0
