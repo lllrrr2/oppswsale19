@@ -101,7 +101,7 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"
-        echo "FIRMWARE_NAME=$(date "+%y.%m.%d")-XY-19-Sale-openwrt-firmware" >> $GITHUB_ENV
+        echo "FIRMWARE_NAME=$(date "+%y.%m.%d")-XY-19-Buy-openwrt-firmware" >> $GITHUB_ENV
 
     - name: Upload bin directory
       uses: actions/upload-artifact@main
