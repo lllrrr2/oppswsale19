@@ -33,7 +33,7 @@ uci commit firewall
 
 echo "00 5 * * 1 sleep 5 && touch /etc/banner && reboot" >> /etc/crontabs/root
 
-sed -i 's/root::0:0:99999:7:::/root:$1$kVZRVpWL$tXnxH2uSjd6lGCQuuGC65/:0:0:99999:7:::/g' /etc/shadow
+sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release
 echo "DISTRIB_REVISION='R8.3.19.0410'" >> /etc/openwrt_release

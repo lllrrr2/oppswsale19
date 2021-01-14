@@ -9,7 +9,7 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 sed -i 's/+IPV6:luci-proto-ipv6 //g' feeds/luci/collections/luci/Makefile
-sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
+sed -i 's/16384/65535/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 sed -i 's/luci-theme-bootstrap/luci-theme-argon-light-mod/g' feeds/luci/collections/luci/Makefile
 sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=R9-Sale-$(shell date +%F-%H)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
 
@@ -39,7 +39,6 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks packag
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2 package/lean/redsocks2
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone https://github.com/Lienol/openwrt-package package/openwrt-package
-#git clone https://github.com/lllrrr/mypsw38 package/mypsw38
 svn co https://github.com/lllrrr/mypsw/trunk/theme package/lean/theme
 svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luci-app-terminal
 git clone https://github.com/vernesong/OpenClash package/lean/OpenClash
@@ -49,6 +48,9 @@ rm -rf feeds/packages/lang/golang/
 svn co https://github.com/Lienol/openwrt-packages/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/libs/libcap/
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
+rm -rf feeds/packages/net/haproxy/
+svn co https://github.com/openwrt/packages/trunk/net/haproxy feeds/packages/net/haproxy
+svn co https://github.com/openwrt/openwrt/trunk/package/utils/lua5.3 package/utils/lua5.3
 rm -rf feeds/packages/utils/ttyd/
 svn co https://github.com/openwrt/packages/trunk/utils/ttyd feeds/packages/utils/ttyd
 svn co https://github.com/coolsnowwolf/lede/trunk/tools/ucl tools/ucl
@@ -57,6 +59,7 @@ cp ../Makefile tools/
 git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
 git clone https://github.com/lllrrr/frpmod package/lean/frpmod
+git clone https://github.com/lllrrr/mytvb package/lean/mytvb
 rm -rf feeds/packages/net/kcptun/
 git clone https://github.com/lllrrr/mysmartdns package/mysmartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
