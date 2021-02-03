@@ -47,7 +47,7 @@ git clone https://github.com/destan19/OpenAppFilter package/lean/OpenAppFilter
 sed -i 's/users~/users=/g' package/lean/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/appfilter.lua
 git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
 rm -rf feeds/packages/lang/golang/
-svn co https://github.com/Lienol/openwrt-packages/trunk/lang/golang feeds/packages/lang/golang
+svn co https://github.com/openwrt/packages/trunk/lang/golang feeds/packages/lang/golang
 rm -rf feeds/packages/libs/libcap/
 svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 rm -rf feeds/packages/net/haproxy/
