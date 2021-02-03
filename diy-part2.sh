@@ -44,6 +44,7 @@ svn co https://github.com/lllrrr/mypsw/trunk/theme package/lean/theme
 svn co https://github.com/lllrrr/myttyd/trunk/luci-app-terminal package/lean/luci-app-terminal
 git clone https://github.com/vernesong/OpenClash package/lean/OpenClash
 git clone https://github.com/destan19/OpenAppFilter package/lean/OpenAppFilter
+sed -i 's/users~/users=/g' package/lean/OpenAppFilter/luci-app-oaf/luasrc/model/cbi/appfilter/appfilter.lua
 git clone https://github.com/tty228/luci-app-serverchan package/lean/luci-app-serverchan
 rm -rf feeds/packages/lang/golang/
 svn co https://github.com/Lienol/openwrt-packages/trunk/lang/golang feeds/packages/lang/golang
@@ -60,7 +61,7 @@ cp ../Makefile tools/
 git clone https://github.com/jerrykuku/luci-app-vssr package/lean/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lean/lua-maxminddb
 git clone https://github.com/lllrrr/frpmod package/lean/frpmod
-git clone https://github.com/lllrrr/mytvb package/lean/mytvb
+#git clone https://github.com/lllrrr/mytvb package/lean/mytvb
 rm -rf feeds/packages/net/kcptun/
 git clone https://github.com/lllrrr/mysmartdns package/mysmartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/lean/openwrt-smartdns
